@@ -68,20 +68,22 @@ def generate_svg(calendar):
     row_height = 13
     box_size = 10
     left_padding = 28
-    top_padding = 24
+    header_height = 22
+    month_label_height = 16
+    top_padding = header_height + month_label_height
     
     num_cols = len(weeks)
     width = left_padding + num_cols * col_width + 10
-    height = top_padding + 7 * row_height + 15
+    height = top_padding + 7 * row_height + 10
     
     svg_parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="100%" height="auto">',
         '  <style>',
         '    .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 9px; fill: #7d8590; }',
-        '    .count { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 10px; fill: #7d8590; }',
+        '    .count { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 11px; fill: #7d8590; font-weight: 500; }',
         '  </style>',
         f'  <rect width="{width}" height="{height}" fill="transparent"/>',
-        f'  <text x="{left_padding}" y="12" class="count">{total} contributions in the last year</text>'
+        f'  <text x="{left_padding}" y="14" class="count">{total} contributions in the last year</text>'
     ]
     
     # Days labels
@@ -98,7 +100,7 @@ def generate_svg(calendar):
         if month_idx != prev_month and i < num_cols - 2:
             prev_month = month_idx
             x = left_padding + i * col_width
-            svg_parts.append(f'  <text x="{x}" y="{top_padding - 6}" class="label">{MONTH_NAMES[month_idx]}</text>')
+            svg_parts.append(f'  <text x="{x}" y="{header_height + 10}" class="label">{MONTH_NAMES[month_idx]}</text>')
             
     # Squares
     for col_idx, week in enumerate(weeks):
