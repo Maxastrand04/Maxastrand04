@@ -43,6 +43,12 @@ Platform Engineer on the IT team at [KTH AI Society](https://kthais.com).
 
 ---
 
+## Contribution activity
+
+![Max's GitHub contribution calendar](https://ghchart.rshah.org/2ea043/Maxastrand04)
+
+---
+
 ## Projects
 
 ### [sports-injury-indicator](https://github.com/de1vos/sports-injury-indicator)
