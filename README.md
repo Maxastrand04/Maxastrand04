@@ -14,6 +14,7 @@ Platform Engineer on the IT team at [KTH AI Society](https://kthais.com).
 | :--- | :--- | :--- | :--- | :--- |
 | [sports-injury-indicator](https://github.com/de1vos/sports-injury-indicator) | Sports injury risk analytics | Backend developer | FastAPI, SQLModel, PostgreSQL | Public, team |
 | [Custom-skills](https://github.com/Maxastrand04/Custom-skills) | Agent context and workflow control | Author | Bash, Claude Code, ADRs | Public, personal |
+| [Munin](https://github.com/Maxastrand04/Munin) | MCP server that turns lectures into mindmaps | Author | Python, MCP, ONNX Runtime | Public, personal |
 | [Vallentuna Stenugnsbageri](https://www.vsbageri.se) | Demand and sellout forecasting | ML engineer | Python, XGBoost, AFT loss | Private, production |
 
 ---
@@ -33,7 +34,9 @@ Platform Engineer on the IT team at [KTH AI Society](https://kthais.com).
 
 ### Agent tooling
 ![](https://img.shields.io/badge/Claude_Code-181717?style=flat&logo=anthropic&logoColor=white)
+![](https://img.shields.io/badge/Codex-181717?style=flat)
 ![](https://img.shields.io/badge/Google_Antigravity-181717?style=flat&logo=google&logoColor=white)
+![](https://img.shields.io/badge/MCP-181717?style=flat&logo=modelcontextprotocol&logoColor=white)
 
 ### Coursework and foundations
 ![](https://img.shields.io/badge/C-181717?style=flat&logo=c&logoColor=white)
@@ -65,6 +68,13 @@ Modular system of local development skills and configuration for Claude Code, bu
 - Self-contained skill architecture where each skill installs through symlinks and isolates its dependencies.
 - Context control governed by architecture decision records, custom hooks, and stripped-down tool definitions.
 - Multi-tier prompt enforcement to eliminate conversational fluff during extended sessions.
+
+### [Munin](https://github.com/Maxastrand04/Munin)
+Local MCP server that turns a recorded Swedish or English lecture into a mindmap linked back to the lecture.
+
+- It is a local MCP server. An LLM in Claude Code or Claude Desktop calls its tools and writes the outline, while Munin transcribes, caches and builds the links.
+- It transcribes Swedish and English lectures from YouTube, KTH Play or local files, and every mindmap node links back to the second in the lecture it came from.
+- I use it in my own coursework at KTH.
 
 ### Vallentuna Stenugnsbageri demand forecasting
 Production machine learning system built for [Vallentuna Stenugnsbageri](https://www.vsbageri.se), also on [Instagram](https://www.instagram.com/vallentunastenugnsbageri/). The repository is private.
